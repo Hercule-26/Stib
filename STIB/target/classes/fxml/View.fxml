@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.SearchableComboBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stib.view.FxmlController">
+   <children>
+      <ScrollPane prefHeight="327.0" prefWidth="972.0">
+         <content>
+            <ImageView fitHeight="443.0" fitWidth="1712.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/metro.gif" />
+               </image>
+            </ImageView>
+         </content>
+      </ScrollPane>
+      <Label layoutX="294.0" layoutY="353.0" text="Begin :" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Italic" size="18.0" />
+         </font>
+      </Label>
+      <SearchableComboBox fx:id="begin" layoutX="294.0" layoutY="383.0" prefHeight="25.0" prefWidth="160.0" />
+      <Label layoutX="293.0" layoutY="461.0" text="End :" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Italic" size="18.0" />
+         </font>
+      </Label>
+      <SearchableComboBox fx:id="end" layoutX="293.0" layoutY="487.0" prefHeight="25.0" prefWidth="160.0" />
+      <ImageView fitHeight="84.0" fitWidth="57.0" layoutX="279.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/MIVB_STIB_Logo.jpeg" />
+         </image>
+      </ImageView>
+      <Button layoutX="353.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleSearchBtnAction" prefHeight="25.0" prefWidth="100.0" text="Search">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <ScrollPane layoutX="517.0" layoutY="349.0" prefHeight="255.0" prefWidth="402.0">
+         <content>
+            <TableView fx:id="table" prefHeight="251.0" prefWidth="397.0">
+              <columns>
+                <TableColumn fx:id="stationsColumn" prefWidth="236.0" text="Stations" />
+                <TableColumn fx:id="lineColumn" prefWidth="159.0" text="Lignes" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button layoutX="346.0" layoutY="429.0" mnemonicParsing="false" onAction="#handleSwapBtnAction" prefHeight="25.0" prefWidth="57.0" text="↑↓" />
+      <Button layoutX="353.0" layoutY="562.0" mnemonicParsing="false" onAction="#handleAddFavorite" prefHeight="25.0" prefWidth="100.0" text="Add favorite" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <SearchableComboBox fx:id="favorite" layoutX="23.0" layoutY="442.0" prefHeight="25.0" prefWidth="247.0" />
+      <Label layoutX="23.0" layoutY="408.0" text="Favorite :" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="delete" layoutX="40.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleDeleteFavorite" prefHeight="25.0" prefWidth="100.0" text="Delete">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="select" layoutX="153.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleSelectFavorite" prefHeight="25.0" prefWidth="100.0" text="Select">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</AnchorPane>
